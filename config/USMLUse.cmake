@@ -1,4 +1,4 @@
-# Common CMake options for compiling the Under Sea Modeling Library (USML)
+﻿# Common CMake options for compiling the Under Sea Modeling Library (USML)
 # and systems based on USML.  Currently it sets up:
 #
 #  - CMake option variables for BUILD_SHARED_LIBS and USML_PEDANTIC 
@@ -117,15 +117,15 @@ add_definitions( -DBOOST_UBLAS_MOVE_SEMANTICS )
 # NetCDF data access library
 
 # C
-find_path(NETCDF_INCLUDES_C NAMES netcdf.h
-    HINTS ${NETCDF_ROOT} PATH_SUFFIXES include)
-find_library(NETCDF_LIBRARIES_C NAMES netcdf
-    HINTS ${NETCDF_ROOT} PATH_SUFFIXES lib)
+# find_path(NETCDF_INCLUDES_C NAMES netcdf.h
+#     HINTS ${NETCDF_ROOT} PATH_SUFFIXES include)
+# find_library(NETCDF_LIBRARIES_C NAMES netcdf
+#     HINTS ${NETCDF_ROOT} PATH_SUFFIXES lib)
 
 # CXX4
-find_path(NETCDF_INCLUDES_CXX4 NAMES netcdf
-    HINTS ${NETCDF_CXX4_ROOT} PATH_SUFFIXES include)
-find_library(NETCDF_LIBRARIES_CXX4 NAMES netcdf_c++4 netcdf-cxx4
-    HINTS ${NETCDF_CXX4_ROOT} PATH_SUFFIXES lib)
+# find_path(NETCDF_INCLUDES_CXX4 NAMES netcdf
+#     HINTS ${NETCDF_CXX4_ROOT} PATH_SUFFIXES include)
+# find_library(NETCDF_LIBRARIES_CXX4 NAMES netcdf_c++4 netcdf-cxx4
+#     HINTS ${NETCDF_CXX4_ROOT} PATH_SUFFIXES lib)
 
-find_program( NETCDF_NCKS ncks )
+# find_program( NETCDF_NCKS ncks )

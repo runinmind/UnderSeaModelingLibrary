@@ -4,7 +4,8 @@
  */
 #pragma once
 
-#include <bits/exception.h>
+//#include <bits/exception.h>
+#include <exception>
 #include <usml/managed/manager_listener.h>
 #include <usml/threads/read_write_lock.h>
 #include <usml/usml_config.h>

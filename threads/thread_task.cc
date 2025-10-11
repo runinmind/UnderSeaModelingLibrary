@@ -3,7 +3,8 @@
  * Task that executes in the thread_pool.
  */
 
-#include <bits/exception.h>
+//#include <bits/exception.h>
+#include <exception>
 #include <usml/threads/thread_task.h>
 
 #include <iostream>

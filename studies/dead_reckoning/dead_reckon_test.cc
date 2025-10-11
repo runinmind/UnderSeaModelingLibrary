@@ -2,7 +2,8 @@
  * @example studies/dead_reckoning/dead_reckon_test.cc
  */
 
-#include <bits/types/time_t.h>
+//#include <bits/types/time_t.h>
+#include <ctime>
 #include <usml/beampatterns/bp_line.h>
 #include <usml/beampatterns/bp_model.h>
 #include <usml/beampatterns/bp_omni.h>

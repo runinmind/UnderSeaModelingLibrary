@@ -4,7 +4,8 @@
  */
 #pragma once
 
-#include <bits/stdint-intn.h>
+//#include <bits/stdint-intn.h>
+#include <cstdint>
 #include <usml/usml_config.h>
 
 #include <atomic>

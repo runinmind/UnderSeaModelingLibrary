@@ -2,7 +2,8 @@
  * @example threads/test/threads_test.cc
  */
 
-#include <bits/stdint-intn.h>
+//#include <bits/stdint-intn.h>
+#include <cstdint>
 #include <cstddef>
 #include <usml/threads/read_write_lock.h>
 #include <usml/threads/thread_controller.h>

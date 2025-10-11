@@ -1,4 +1,4 @@
-/**
+﻿/**
  * @file bp_arb.cc
  * Models a beam pattern based on arbitrary 3D element locations.
  */
@@ -7,7 +7,8 @@
 
 #include <boost/numeric/ublas/vector_expression.hpp>
 #include <cmath>
-#include <ext/type_traits.h>
+//#include <ext/type_traits.h>
+#include <type_traits>
 
 using namespace usml::beampatterns;
 

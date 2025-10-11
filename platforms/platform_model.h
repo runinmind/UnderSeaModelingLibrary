@@ -1,10 +1,11 @@
-/**
+﻿/**
  * @file platform_model.h
  * Physical object that moves through the simulation.
  */
 #pragma once
 
-#include <bits/types/time_t.h>
+//#include <bits/types/time_t.h>
+#include <ctime>
 #include <usml/managed/managed_obj.h>
 #include <usml/managed/manager_template.h>
 #include <usml/managed/update_notifier.h>

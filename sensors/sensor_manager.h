@@ -4,7 +4,8 @@
  */
 #pragma once
 
-#include <bits/exception.h>
+//#include <bits/exception.h>
+#include <exception>
 #include <usml/managed/manager_template.h>
 #include <usml/managed/update_listener.h>
 #include <usml/sensors/sensor_model.h>

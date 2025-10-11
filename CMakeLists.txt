@@ -1,4 +1,4 @@
-# Cross platform build environment for the libraries and regression tests of
+﻿# Cross platform build environment for the libraries and regression tests of
 # the Under Sea Modeling Library (USML).
 #
 # This script traverses the active modules and collects all library source
@@ -29,6 +29,7 @@ project( usml C CXX )
 file(STRINGS config/VERSION.txt PACKAGE_VERSION)
 message(STATUS "USML version ${PACKAGE_VERSION}" )
 set( CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/config" )
+set( CMAKE_CXX_STANDARD 17 )
 
 set( PACKAGE_MODULES ublas types netcdf ocean threads beampatterns transmit
     eigenrays eigenverbs biverbs waveq3d wavegen 

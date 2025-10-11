@@ -12,3 +12,5 @@
 /.project
 /.cproject
 /build
+/bin
+/lib

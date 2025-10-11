@@ -31,19 +31,32 @@ message(STATUS "USML version ${PACKAGE_VERSION}" )
 set( CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/config" )
 set( CMAKE_CXX_STANDARD 17 )
 
-set( PACKAGE_MODULES ublas types netcdf ocean threads beampatterns transmit
-    eigenrays eigenverbs biverbs waveq3d wavegen 
-    managed platforms sensors rvbts)
+# set( PACKAGE_MODULES ublas types netcdf ocean threads beampatterns transmit
+#     eigenrays eigenverbs biverbs waveq3d wavegen 
+#     managed sensors rvbts)
+
+set( PACKAGE_MODULES 
+    ublas       # Linear algebra utilities
+    types       # Data types (positions, vectors, sequences)
+    ocean       # Ocean environment models
+    waveq3d     # Wave propagation core
+    eigenrays   # Eigenray collection (optional but commonly used)
+    netcdf-cxx  # netcdf's cpp version source
+    eigenverbs
+    threads
+    netcdf
+)
 
 option( USML_BUILD_TESTS "build all Tests" ON )
 option( USML_BUILD_STUDIES "build all Studies" OFF )
 
 include ( USMLUse )
+include ( third/Depends.cmake )
+include_directories( ${PROJECT_SOURCE_DIR}/netcdf-cxx )
 include_directories( ${PROJECT_SOURCE_DIR}/.. )
 include_directories(    # ignore warnings in Boost and NetCDF includes
     SYSTEM
-    ${Boost_INCLUDE_DIR}
-    ${NETCDF_INCLUDES} )
+    ${Boost_INCLUDE_DIR} )
 
 ######################################################################
 # macro: searches a module list for headers and sources
@@ -52,7 +65,7 @@ macro( FIND_SOURCES MODULES SUFFIX )
     foreach( MOD ${MODULES} )
         message( STATUS "processing ${MOD}${SUFFIX}" )
         file( GLOB HDR_LIST ${MOD}${SUFFIX}/*.h )
-        file( GLOB SRC_LIST ${MOD}${SUFFIX}/*.cc )
+        file( GLOB SRC_LIST ${MOD}${SUFFIX}/*.cc ${MOD}${SUFFIX}/*.cpp )
         set( HEADERS ${HEADERS} ${HDR_LIST} )
         set( SOURCES ${SOURCES} ${SRC_LIST} )
         source_group( ${MOD} FILES ${HDR_LIST} ${SRC_LIST} )
@@ -71,8 +84,8 @@ FIND_SOURCES( "${PACKAGE_MODULES}" "" )
 
 set( TARGET usml )
 add_library( ${TARGET} ${HEADERS} ${SOURCES} )
-target_link_libraries( ${TARGET} ${Boost_LIBRARIES} ${NETCDF_LIBRARIES} 
-                       ${NETCDF_LIBRARIES_CXX4}
+add_third( ${TARGET} netcdf )
+target_link_libraries( ${TARGET} PUBLIC ${Boost_LIBRARIES}
                        ${CMAKE_THREAD_LIBS_INIT} )
 set_target_properties( ${TARGET} PROPERTIES VERSION ${PACKAGE_VERSION}
                        DEBUG_POSTFIX "_d")

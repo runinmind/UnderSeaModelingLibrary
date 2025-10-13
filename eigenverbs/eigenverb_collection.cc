@@ -1,4 +1,4 @@
-/**
+﻿/**
  * @file eigenverb_collection.cc
  * Collection of eigenverbs in the form of a vector of eigenverb_lists.
  */
@@ -9,6 +9,7 @@
 #include <usml/types/wposition1.h>
 #include <usml/ublas/math_traits.h>
 #include <usml/ublas/vector_math.h>
+#include <usml/netcdf-cxx/netcdfcpp.h>
 
 #include <boost/geometry/geometries/polygon.hpp>
 #include <boost/geometry/index/detail/predicates.hpp>
@@ -20,7 +21,6 @@
 #include <iostream>
 #include <iterator>
 #include <list>
-#include <netcdf>
 #include <sstream>
 #include <string>
 

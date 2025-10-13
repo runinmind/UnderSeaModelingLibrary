@@ -1,4 +1,4 @@
-/**
+﻿/**
  * @file data_grid.h
  * N-dimensional data set and its associated axes.
  */
@@ -7,12 +7,12 @@
 #include <usml/types/seq_vector.h>
 #include <usml/types/wposition.h>
 #include <usml/usml_config.h>
+#include <usml/netcdf-cxx/netcdfcpp.h>
 
 #include <boost/numeric/ublas/matrix.hpp>
 #include <boost/numeric/ublas/vector.hpp>
 #include <cstddef>
 #include <memory>
-#include <netcdf>
 #include <sstream>
 #include <string>
 #include <typeinfo>

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * @file netcdf_bathy.h
  * Extracts bathymetry data from world-wide bathymetry databases.
  */
@@ -7,8 +7,7 @@
 #include <usml/types/gen_grid.h>
 #include <usml/types/wposition.h>
 #include <usml/usml_config.h>
-
-#include <netcdf>
+#include <usml/netcdf-cxx/netcdfcpp.h>
 
 namespace usml {
 namespace netcdf {

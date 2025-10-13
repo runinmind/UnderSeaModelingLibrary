@@ -1,4 +1,4 @@
-/**
+﻿/**
  * @file netcdf_profile.h
  * Extracts ocean profile data from world-wide databases.
  */
@@ -7,8 +7,7 @@
 #include <stddef.h>
 #include <usml/types/gen_grid.h>
 #include <usml/usml_config.h>
-
-#include <netcdf>
+#include <usml/netcdf-cxx/netcdfcpp.h>
 
 namespace usml {
 namespace netcdf {

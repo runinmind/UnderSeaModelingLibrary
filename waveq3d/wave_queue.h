@@ -1,4 +1,4 @@
-/**
+﻿/**
  * @file wave_queue.h
  * Wavefront propagator for the WaveQ3D model.
  */
@@ -12,12 +12,12 @@
 #include <usml/usml_config.h>
 #include <usml/waveq3d/reflection_notifier.h>
 #include <usml/waveq3d/wave_thresholds.h>
+#include <usml/netcdf-cxx/netcdfcpp.h>
 
 #include <boost/numeric/ublas/matrix.hpp>
 #include <boost/numeric/ublas/vector.hpp>
 #include <cstddef>
 #include <memory>
-#include <netcdf>
 
 namespace usml {
 namespace waveq3d {

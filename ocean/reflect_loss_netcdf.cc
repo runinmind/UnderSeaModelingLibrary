@@ -1,12 +1,12 @@
-/**
+﻿/**
  * @file reflect_loss_netcdf.cc
  * Builds rayleigh models for an imported netcdf bottom province file.
  */
 #include <usml/ocean/reflect_loss_netcdf.h>
 #include <usml/types/gen_grid.h>
+#include <usml/netcdf-cxx/netcdfcpp.h>
 
 #include <exception>
-#include <netcdf>
 
 using namespace usml::ocean;
 

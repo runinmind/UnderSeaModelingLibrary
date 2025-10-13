@@ -52,7 +52,6 @@ option( USML_BUILD_STUDIES "build all Studies" OFF )
 
 include ( USMLUse )
 include ( third/Depends.cmake )
-include_directories( ${PROJECT_SOURCE_DIR}/netcdf-cxx )
 include_directories( ${PROJECT_SOURCE_DIR}/.. )
 include_directories(    # ignore warnings in Boost and NetCDF includes
     SYSTEM

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * @file eigenray_collection.cc
  * List of targets and their associated propagation data.
  */
@@ -6,6 +6,7 @@
 #include <usml/eigenrays/eigenray_collection.h>
 #include <usml/types/wvector1.h>
 #include <usml/ublas/math_traits.h>
+#include <usml/netcdf-cxx/netcdfcpp.h>
 
 #include <algorithm>
 #include <boost/numeric/ublas/storage.hpp>
@@ -13,7 +14,6 @@
 #include <cmath>
 #include <complex>
 #include <list>
-#include <netcdf>
 
 using namespace usml::eigenrays;
 

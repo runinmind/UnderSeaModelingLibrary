@@ -1,4 +1,4 @@
-/**
+﻿/**
  * @file netcdf_coards.h
  * Reads a single COARDS data grid from a netCDF file.
  */
@@ -6,11 +6,11 @@
 
 #include <usml/types/gen_grid.h>
 #include <usml/types/seq_vector.h>
+#include <usml/netcdf-cxx/netcdfcpp.h>
 
 #include <cmath>
 #include <cstddef>
 #include <memory>
-#include <netcdf>
 #include <stdexcept>
 #include <vector>
 

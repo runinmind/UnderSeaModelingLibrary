@@ -28,3 +28,5 @@
 #include <usml/beampatterns/bp_planar.h>
 #include <usml/beampatterns/bp_solid.h>
 #include <usml/beampatterns/bp_trig.h>
+#include <usml/beampatterns/bp_cylinder.h>
+#include <usml/beampatterns/bp_sphere.h>

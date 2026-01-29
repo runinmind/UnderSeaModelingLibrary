@@ -44,6 +44,7 @@ set( PACKAGE_MODULES
     netcdf-cxx  # netcdf's cpp version source
     eigenverbs
     threads
+    beampatterns
     netcdf
 )
 
